@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getIdFromUrl } from "./helpers/getIdFromUrl";
 
 export const Form = () => {
   const [value, setValue] = useState("");
@@ -11,6 +12,10 @@ export const Form = () => {
     alert("An url was submitted: " + value)
     e.preventDefault()
   }
+
+//   const fetchResource = async () => {
+//       response = await fetch()
+//   }
 
   return (
     <form onSubmit={handleSubmit}>
