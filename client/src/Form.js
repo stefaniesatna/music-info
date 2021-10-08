@@ -12,17 +12,43 @@ export const Form = ({getTrack}) => {
     e.preventDefault()
   }
 
-//   const fetchResource = async () => {
-//       response = await fetch()
-//   }
-
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="url" value={value} onChange={handleChange}></input>
-      <button>Submit</button>
+    <form onSubmit={handleSubmit} style={styleForm}>
+      <input type="url" value={value} onChange={handleChange} style={styleInput}></input>
+      <button style={styleButton}>S</button>
     </form>
   );
 };
+const styleForm = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  minWidth: "75%",
+  // borderStyle: "solid",
+  // borderWidth: 1,
+  // borderColor: "aqua"
+}
+const styleInput = {
+  flex: 1,
+  backgroundColor: "black",
+  borderStyle: "solid",
+  borderWidth: 2.5, 
+  borderColor: "#F72585",
+  outline: "none",
+  color: "#4CC9F0",
+  fontSize: 24,
+  fontFamily: "Helvetica"
+}
+
+const styleButton = {
+  width: "3.5em",
+  height: "3.5em",
+  marginLeft: "0.5em",
+  borderRadius: 0,
+  borderStyle: "none",
+  backgroundColor: "#F72585",
+
+}
 
 // https://open.spotify.com/track/6joEpIEWpZYrezVvqrbvxy?si=dca1797f9f764fa5
 // https://open.spotify.com/album/02G0RzkNN3OJDJyxfsVLXL?si=R4rXHYtYSuyU60FEpPjErg&dl_branch=1
