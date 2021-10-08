@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { getIdFromUrl } from "./helpers/getIdFromUrl";
 
-export const Form = () => {
+export const Form = ({getTrack}) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
@@ -9,7 +8,7 @@ export const Form = () => {
   };
 
   const handleSubmit = e => {
-    alert("An url was submitted: " + value)
+    getTrack(value)
     e.preventDefault()
   }
 
